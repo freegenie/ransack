@@ -26,7 +26,7 @@ module Ransack
           table       = attr.arel_attribute.relation.table_name
           connection  = attr.klass.connection
           unless connection.table_exists?(table)
-            raise "No table named #{table} exists"
+            # raise "No table named #{table} exists"
           end
           connection.schema_cache.columns_hash(table)[name].type
         end
